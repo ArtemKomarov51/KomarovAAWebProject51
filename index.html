@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="/style/styles.css"/>
+
+</head>
+<body>
+    <form id = "main-form" action = "/reg-data" method="post">
+        <div class="container">
+            <nav>
+                <br>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox"/>
+                        <div class="slider round"></div>
+                    </label>
+                    <em>Светлая или тёмная тема</em>
+                </div>
+            </nav>
+            <h1>Регистрация нового пользователя</h1>
+            <br>
+            <label for = "FIO-input">Введите ваше ФИО</label>
+            <br>
+            <input type = "text" name="FIOUser" id = "FIO-input" placeholder="ФИО" minlength="5" maxlength="70" required/>
+            <br>
+            <label for = "email-input">Введите ваш адрес электронной почты (формат:'aaa@bbb.ru')</label>
+            <br>
+            <input type = "email" name="email" id = "email-input" placeholder="Адрес электронной почты" pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$" minlength="5" maxlength="50" required/>
+            <br>
+            <label for = "password-input">Введите ваш пароль</label>
+            <br>
+            <input type = "password" name="password" id = "password-input" placeholder="Пароль" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" minlength="8" maxlength="35" required/>
+            <br>
+            <label for = "user-type-input">Выберите вашу роль</label>
+            <br>
+            <select class = "select-css" name="selectRole" id = "user-type-input">
+                <option value = "Администратор">Администратор</option>
+                <option value = "Модератор">Модератор</option>
+                <option value = "Пользователь">Пользователь</option>
+            </select>
+            <br>
+            <input type ="submit" id = "sumbit-input" value = "Зарегистрироваться"/>
+            <br>
+        </div>
+    </form>
+    <script src="/script/JavaScript.js"></script>
+</body>
+</html>
